@@ -15,10 +15,10 @@ class CreatePasoksTable extends Migration
     {
         Schema::create('pasoks', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigIncrements('distributors_id');
-            $table->bigIncrements('bukus_id');
             $table->float('jumlah');
             $table->date('tanggal');
+            $table->unsignedBigInteger('id_distributor');
+            $table->unsignedBigInteger('id_buku');
             $table->timestamps();
         });
     }

@@ -23,6 +23,7 @@ class CreateBukusTable extends Migration
             $table->integer('stok');
             $table->float('harga_pokok');
             $table->float('harga_jual');
+            $table->float('ppn');
             $table->float('diskon');
             $table->timestamps();
         });

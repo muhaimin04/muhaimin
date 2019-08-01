@@ -15,6 +15,11 @@ class CreatePenjualansTable extends Migration
     {
         Schema::create('penjualans', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->float('jumlah');
+            $table->float('total');
+            $table->date('tanggal');
+            $table->unsignedBigInteger('id_buku');
+            $table->unsignedBigInteger('id_kasir');
             $table->timestamps();
         });
     }
