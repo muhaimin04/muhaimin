@@ -35,6 +35,7 @@
                     <ul class="navbar-nav mr-auto">
                         @guest
                         @else
+                        @role('admin')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('#') }}">Home 1</a>
                         </li>
@@ -44,6 +45,7 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('#') }}">Home 3</a>
                         </li>
+                        @endrole
                         @endguest
                     </ul>
 
